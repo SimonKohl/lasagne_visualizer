@@ -59,6 +59,7 @@ class TestLasagne_visualizer(unittest.TestCase):
         no_epochs = 5
 
         net['l_conv'].params[net['l_conv'].W].remove('trainable')
+        net['l_out'].params[net['l_out'].W].add('trainable')
 
         ws = lasagne_visualizer.weight_supervisor(net, no_epochs, mode='currently_trainable')
 
