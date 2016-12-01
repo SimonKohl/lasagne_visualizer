@@ -40,16 +40,15 @@ def pstdev(data):
 class weight_supervisor():
     """
     Class that lets you live-monitor the weights of an arbitrary number of layers.
-    Example: PLOT ALL TRAINABLE WEIGHTS IN LASAGNE NETWORK
+    Example: PLOT ALL CURRENTLY TRAINABLE WEIGHTS IN LASAGNE NETWORK
         ...import <libraries>
         ...%matplotlib notebook
         ...define net
         ...define no_epochs
 
         f = plt.figure()
-        layers_to_supervise = [l for l in net.keys() if hasattr(net[l], 'W') if list(net[l].params[net[l].W])[0] == 'trainable']
 
-        weight_supervisor = MyVisualization.weight_supervisor(net, layers_to_supervise, no_epochs, custom_weight_ranges = {'conv1_2':[-2., 2.]})
+        weight_supervisor = lasagne_visualizer.weight_supervisor(net, mode='currently_trainable', no_epochs, custom_weight_ranges = {'conv1_2':[-2., 2.]})
         weight_supervisor.initialize_grid()
         for epoch in range(no_epochs):
             ...train
