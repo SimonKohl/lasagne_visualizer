@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import numpy as np
+# import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from copy import deepcopy
@@ -14,6 +14,28 @@ def get_all_trainable_layers(net):
 
     layers = [l for l in net.keys() if hasattr(net[l], 'W')]
     return layers
+
+def mean(data):
+    """Return the sample arithmetic mean of data."""
+    n = len(data)
+    if n < 1:
+        raise ValueError('mean requires at least one data point')
+    return sum(data)/n # in Python 2 use sum(data)/float(n)
+
+def _ss(data):
+    """Return sum of square deviations of sequence data."""
+    c = mean(data)
+    ss = sum((x-c)**2 for x in data)
+    return ss
+
+def pstdev(data):
+    """Calculates the population standard deviation."""
+    n = len(data)
+    if n < 2:
+        raise ValueError('variance requires at least two data points')
+    ss = _ss(data)
+    pvar = ss/n # the population variance
+    return pvar**0.5
 
 class weight_supervisor():
     """
@@ -109,9 +131,9 @@ class weight_supervisor():
 
             self.max_weights[l].append(max(weights))
             self.min_weights[l].append(min(weights))
-            self.mean_weights[l].append(np.mean(weights))
-            self.err_band_lo_weights[l].append(np.mean(weights) - np.std(weights) / 2.)
-            self.err_band_hi_weights[l].append(np.mean(weights) + np.std(weights) / 2.)
+            self.mean_weights[l].append(mean(weights))
+            self.err_band_lo_weights[l].append(mean(weights) - pstdev(weights) / 2.)
+            self.err_band_hi_weights[l].append(mean(weights) + pstdev(weights) / 2.)
 
         self.epochs.append(self.curr_epoch)
         self.curr_epoch += 1
