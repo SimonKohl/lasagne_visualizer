@@ -3,10 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from copy import deepcopy
-import seaborn as sns
 
-current_palette = sns.color_palette()
-sns.set_style(style='white')
 
 def get_currently_trainable_layers(net):
 
@@ -134,9 +131,9 @@ class weight_supervisor():
             ### remove collection objects to avoid stacked redrawing
             self.axis[l_ix].collections[:] = []
 
-            self.axis[l_ix].fill_between(self.epochs, self.min_weights[l], self.err_band_lo_weights[l], facecolor='green', alpha=0.5, label='extremata')
-            self.axis[l_ix].fill_between(self.epochs, self.max_weights[l], self.err_band_hi_weights[l] , facecolor='green', alpha=0.5)
-            self.axis[l_ix].fill_between(self.epochs, self.err_band_lo_weights[l] , self.err_band_hi_weights[l], facecolor='blue', alpha=0.5, label='std. dev.')
+            self.axis[l_ix].fill_between(self.epochs, self.min_weights[l], self.err_band_lo_weights[l], facecolor='green', edgecolor='green',alpha=0.5, label='extremata')
+            self.axis[l_ix].fill_between(self.epochs, self.max_weights[l], self.err_band_hi_weights[l] , facecolor='green', edgecolor='green', alpha=0.5)
+            self.axis[l_ix].fill_between(self.epochs, self.err_band_lo_weights[l] , self.err_band_hi_weights[l], facecolor='blue', edgecolor='blue',alpha=0.5, label='std. dev.')
 
             ### remove previous text objects to avoid stacked redrawing
             self.axis[l_ix].texts[:] = []
