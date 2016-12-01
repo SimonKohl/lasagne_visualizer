@@ -16,6 +16,8 @@ env:
 - TOXENV=py27
 #- TOXENV=py26
 #- TOXENV=pypy
+
+before_script: "export DISPLAY=:99.0"
 install: pip install -U tox
 language: python
 python: 2.7
