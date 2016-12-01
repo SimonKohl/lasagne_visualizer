@@ -7,7 +7,7 @@ from copy import deepcopy
 
 def get_currently_trainable_layers(net):
 
-    layers = [l for l in net.keys() if hasattr(net[l], 'W') if 'trainable' in list(net[l].params[net[l].W])[0]]
+    layers = [l for l in net.keys() if hasattr(net[l], 'W') if 'trainable' in list(net[l].params[net[l].W])]
     return layers
 
 def get_all_trainable_layers(net):
