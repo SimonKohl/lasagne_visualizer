@@ -26,9 +26,6 @@ with open('HISTORY.rst') as history_file:
 # #
 # requirements = test_requirements
 
-test_requirements = [
-    # TODO: put package requirements here
-]
 requirements = [
 "alabaster==0.7.9", "argh==0.26.2", "arrow==0.10.0", "Babel==2.3.4", "binaryornot==0.4.0", "bumpversion==0.5.3", "cffi==1.9.1",\
 "chardet==2.3.0", "click==6.6", "cookiecutter==1.4.0", "coverage==4.1", "cryptography==1.4", "cycler==0.10.0", "docutils==0.12",\
@@ -38,6 +35,8 @@ requirements = [
 "python-dateutil==2.6.0", "pytz==2016.7", "PyYAML==3.11", "seaborn==0.7.1", "six==1.10.0", "snowballstemmer==1.2.1", "Sphinx==1.4.8", "Theano==0.8.2",\
 "tox==2.3.1", "virtualenv==15.1.0", "watchdog==0.8.3", "whichcraft==0.4.0"
 ]
+
+test_requirements = requirements
 
 setup(
     name='lasagne_visualizer',
