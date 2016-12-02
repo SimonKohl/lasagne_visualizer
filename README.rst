@@ -32,7 +32,7 @@ The image below gives a flavor of how your output might come out to look:
 
 Example
 -----
-For an example on how to use lasagne_visualizer in an IPython Notebook, see https://github.com/SimonKohl/lasagne_visualizer/blob/develop/examples/Finetuning%20for%20Image%20Classification.ipynb, which borrows the underlying example from  https://github.com/ebenolson..
+For an example on how to use lasagne_visualizer in an IPython Notebook, see `Finetuning for Image Classification <https://github.com/SimonKohl/lasagne_visualizer/blob/develop/examples/Finetuning%20for%20Image%20Classification.ipynb>`_, which borrows the underlying example from  `ebenolson<https://github.com/ebenolson>`_.
 
 
 Further Information
