@@ -35,6 +35,11 @@ Example
 -----
 For an example on how to use lasagne_visualizer in an IPython Notebook, see `Finetuning for Image Classification <https://github.com/SimonKohl/lasagne_visualizer/blob/develop/examples/Finetuning%20for%20Image%20Classification.ipynb>`_, which borrows the underlying example from  `ebenolson <https://github.com/ebenolson>`_.
 
+Installation
+-----
+Before installing lasagne_visualizer be sure to install both Lasagne and Theano. Lasagne recommends using the bleeding-edge versions (See `Lasagne Installation <https://lasagne.readthedocs.io/en/latest/user/installation.html>`_).
+Then just go: [sudo] pip install lasagne-visualizer
+
 
 Further Information
 -----
