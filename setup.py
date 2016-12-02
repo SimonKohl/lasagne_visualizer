@@ -11,7 +11,8 @@ with open('HISTORY.rst') as history_file:
 
 
 requirements = [
-"Lasagne==0.1", "matplotlib==1.5.3", "numpy", "Theano==0.8.2"
+# "Lasagne==0.1", "matplotlib==1.5.3", "numpy", "Theano==0.8.2"
+"matplotlib==1.5.3", "numpy"
 ]
 
 
