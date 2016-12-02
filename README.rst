@@ -25,6 +25,7 @@ Using ipython notebook you can now live-monitor the weight learning of your mode
 
 Obviously, having a rough idea of how the weights of your model progress, can guide you in how to tweak your architecture and its parameters.
 Other frameworks such as Tensorflow have had such visualizations from the start and lasagne_visualizer tries to provide a similar, tough much more leight-weight, tool.
+
 The image below gives a flavor of how your output might come out to look:
 
 .. image:: https://github.com/SimonKohl/lasagne_visualizer/blob/develop/examples/example.png
