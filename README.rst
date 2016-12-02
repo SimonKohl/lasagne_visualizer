@@ -49,7 +49,7 @@ Features
 * plot the mean/extremal values/1 sigma error band of the weights of lasagne layers as a function of the training epochs
 * use modes to either auto-select all trainable/the currently trainable/user-specified layers for plotting
 * adjust the range of the weights in the plots
-* TODO: enable the plotting of bias weight
+* TODO: enable the plotting of bias weights
 
 Credits
 ---------
