@@ -62,7 +62,6 @@ class weight_supervisor():
         """
         Initialize the weight_supervisor class.
         :param net: dictionary with layer names as keys and lasagne layers as values.
-        :param layer_names: list of names of layers to supervise.
         :param no_epochs: integer number of epochs to supervise for.
         :param mode: one in 'currently_trainable', 'all_trainable', 'custom'; if 'custom', @param layer_names needs to be given
         :param layer_names: list of names of layers to supervise, used only if @param mode equals 'custom'
@@ -111,7 +110,7 @@ class weight_supervisor():
                 raise Exception("aspect ratio must be > 0., was found {}".format(aspect_ratio))
 
             self.axis[l].set_aspect(aspect_ratio)
-            self.axis[l].locator_params(axis='y',nbins=5)
+            self.axis[l].locator_params(axis='y', nbins=5)
             self.axis[l].locator_params(axis='x', nbins=5)
 
         self.axis[-1].set_xlabel('epochs')

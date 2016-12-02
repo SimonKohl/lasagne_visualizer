@@ -18,7 +18,8 @@ lasagne_visualizer
      :alt: Updates
 
 
-A tiny package to enable live-visualization of weight learning using lasagne models in ipython notebook.
+A small python package that lets you have a glimpse at the inner workings of your deep lasagne architectures.
+    Using ipython notebook you can now live-monitor the weight learning of your models, or just save the generated visualizations when running command line python scripts.
 
 
 * Free software: MIT license
