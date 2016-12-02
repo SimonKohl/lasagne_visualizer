@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from copy import deepcopy
@@ -41,6 +40,7 @@ class weight_supervisor():
     """
     Class that lets you live-monitor the weights of an arbitrary number of layers.
     Example: PLOT ALL CURRENTLY TRAINABLE WEIGHTS IN LASAGNE NETWORK
+        from lasagne_visualizer import lasagne_visualizer
         ...import <libraries>
         ...%matplotlib notebook
         ...define net
