@@ -19,8 +19,14 @@ lasagne_visualizer
 
 
 A small python package that lets you have a glimpse at the inner workings of your deep lasagne architectures.
+
     Using ipython notebook you can now live-monitor the weight learning of your models, or just save the generated visualizations when running command line python scripts.
 
+Obviously, having a rough idea of how the weights of your model progress, can guide you in how to tweak your architecture and its parameters.
+Other frameworks such as Tensorflow have had such visualizations from the start and lasagne_visualizer tries to provide a similar, tough more leight-weight, tool.
+The image below gives a flavor of how your output might come out to look:
+
+..image:: https://github.com/SimonKohl/lasagne_visualizer/blob/develop/examples/example.png
 
 * Free software: MIT license
 * Documentation: https://lasagne-visualizer.readthedocs.io.
