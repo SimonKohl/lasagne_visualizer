@@ -27,7 +27,8 @@ Obviously, having a rough idea of how the weights of your model progress, can gu
 Other frameworks such as Tensorflow have had such visualizations from the start and lasagne_visualizer tries to provide a similar, tough more leight-weight, tool.
 The image below gives a flavor of how your output might come out to look:
 
-![alt tag](https://github.com/SimonKohl/lasagne_visualizer/blob/develop/examples/example.png)
+.. image:: https://github.com/SimonKohl/lasagne_visualizer/blob/develop/examples/example.png
+    :target: https://github.com/SimonKohl/lasagne_visualizer/blob/develop/examples/
 
 * Free software: MIT license
 * Documentation: https://lasagne-visualizer.readthedocs.io.
